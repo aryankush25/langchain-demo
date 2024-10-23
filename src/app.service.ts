@@ -22,7 +22,7 @@ export class AppService {
 
   private async openai() {
     const model = new ChatOpenAI({
-      model: 'gpt-4',
+      model: 'gpt-4o',
       apiKey: process.env.OPENAI_API_KEY_1,
     });
     const messages = [
