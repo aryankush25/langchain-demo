@@ -6,7 +6,7 @@ import { HumanMessage, SystemMessage } from '@langchain/core/messages';
 
 @Injectable()
 export class AppService {
-  async getHello(service: 'openai' | 'anthropic' | 'mistral') {
+  async pingAI(service: 'openai' | 'anthropic' | 'mistral') {
     if (service === 'openai') {
       return this.openai();
     }

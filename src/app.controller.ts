@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(@Query('service') service: 'openai' | 'anthropic' | 'mistral') {
-    return this.appService.getHello(service);
+  pingAI(@Query('service') service: 'openai' | 'anthropic' | 'mistral') {
+    return this.appService.pingAI(service);
   }
 }
