@@ -7,7 +7,8 @@ export class AppController {
 
   @Get()
   pingAI(
-    @Query('service') service: 'openai' | 'anthropic' | 'mistral',
+    @Query('service')
+    service: 'openai' | 'anthropic' | 'mistral' | 'google',
     @Body('query') userQuery: string,
   ) {
     return this.appService.pingAI(service, userQuery);
