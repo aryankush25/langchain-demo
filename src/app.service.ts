@@ -6,28 +6,28 @@ import { HumanMessage, SystemMessage } from '@langchain/core/messages';
 
 @Injectable()
 export class AppService {
-  async pingAI(service: 'openai' | 'anthropic' | 'mistral') {
+  async pingAI(service: 'openai' | 'anthropic' | 'mistral', userQuery: string) {
     if (service === 'openai') {
-      return this.openai();
+      return this.openai(userQuery);
     }
     if (service === 'anthropic') {
-      return this.anthropic();
+      return this.anthropic(userQuery);
     }
     if (service === 'mistral') {
-      return this.mistral();
+      return this.mistral(userQuery);
     }
 
     return { service: 'unknown', res: 'unknown' };
   }
 
-  private async openai() {
+  private async openai(userQuery: string) {
     const model = new ChatOpenAI({
       model: 'gpt-4o',
       apiKey: process.env.OPENAI_API_KEY_1,
     });
     const messages = [
-      new SystemMessage('Translate the following from English into Italian'),
-      new HumanMessage('hi!'),
+      new SystemMessage('Process the following query'),
+      new HumanMessage(userQuery),
     ];
 
     const res = await model.invoke(messages);
@@ -35,7 +35,7 @@ export class AppService {
     return { service: 'openai', res };
   }
 
-  private async anthropic() {
+  private async anthropic(userQuery: string) {
     const model = new ChatAnthropic({
       model: 'claude-3-5-sonnet-20240620',
       temperature: 0,
@@ -43,8 +43,8 @@ export class AppService {
     });
 
     const messages = [
-      new SystemMessage('Translate the following from English into Italian'),
-      new HumanMessage('hi!'),
+      new SystemMessage('Process the following query'),
+      new HumanMessage(userQuery),
     ];
 
     const res = await model.invoke(messages);
@@ -52,7 +52,7 @@ export class AppService {
     return { service: 'anthropic', res };
   }
 
-  private async mistral() {
+  private async mistral(userQuery: string) {
     const model = new ChatMistralAI({
       model: 'mistral-large-latest',
       temperature: 0,
@@ -60,8 +60,8 @@ export class AppService {
     });
 
     const messages = [
-      new SystemMessage('Translate the following from English into Italian'),
-      new HumanMessage('hi!'),
+      new SystemMessage('Process the following query'),
+      new HumanMessage(userQuery),
     ];
 
     const res = await model.invoke(messages);
