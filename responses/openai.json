@@ -1,0 +1,103 @@
+{
+  "service": "openai",
+  "res": {
+    "lc": 1,
+    "type": "constructor",
+    "id": ["langchain_core", "messages", "AIMessage"],
+    "kwargs": {
+      "lc_serializable": true,
+      "lc_kwargs": {
+        "lc_serializable": true,
+        "lc_kwargs": {
+          "content": "SRK refers to Shah Rukh Khan, an Indian actor, film producer, and television personality, widely recognized as one of the most prominent and influential figures in the Indian film industry. Known as the \"King of Bollywood\" or \"King Khan,\" he has appeared in over 80 Bollywood films and has received numerous accolades for his performances. Shah Rukh Khan is also admired for his philanthropic efforts and global appeal.",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "additional_kwargs": {},
+          "response_metadata": {
+            "usage": {
+              "prompt_tokens": 20,
+              "completion_tokens": 83,
+              "total_tokens": 103,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_a7d06e42a7"
+          },
+          "id": "chatcmpl-ALUEjXnPHnUe80vgYNV0sfqGb4Vor"
+        },
+        "lc_namespace": ["langchain_core", "messages"],
+        "content": "SRK refers to Shah Rukh Khan, an Indian actor, film producer, and television personality, widely recognized as one of the most prominent and influential figures in the Indian film industry. Known as the \"King of Bollywood\" or \"King Khan,\" he has appeared in over 80 Bollywood films and has received numerous accolades for his performances. Shah Rukh Khan is also admired for his philanthropic efforts and global appeal.",
+        "additional_kwargs": {},
+        "response_metadata": {
+          "usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 83,
+            "total_tokens": 103,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_a7d06e42a7"
+        },
+        "id": "chatcmpl-ALUEjXnPHnUe80vgYNV0sfqGb4Vor",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 83,
+          "input_tokens": 20,
+          "total_tokens": 103,
+          "input_token_details": {
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "reasoning": 0
+          }
+        }
+      },
+      "lc_namespace": ["langchain_core", "messages"],
+      "content": "SRK refers to Shah Rukh Khan, an Indian actor, film producer, and television personality, widely recognized as one of the most prominent and influential figures in the Indian film industry. Known as the \"King of Bollywood\" or \"King Khan,\" he has appeared in over 80 Bollywood films and has received numerous accolades for his performances. Shah Rukh Khan is also admired for his philanthropic efforts and global appeal.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 20,
+          "completionTokens": 83,
+          "totalTokens": 103
+        },
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 20,
+          "completion_tokens": 83,
+          "total_tokens": 103,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "system_fingerprint": "fp_a7d06e42a7"
+      },
+      "id": "chatcmpl-ALUEjXnPHnUe80vgYNV0sfqGb4Vor",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 83,
+        "input_tokens": 20,
+        "total_tokens": 103,
+        "input_token_details": {
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "reasoning": 0
+        }
+      }
+    }
+  }
+}
