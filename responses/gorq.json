@@ -1,0 +1,27 @@
+{
+  "service": "gorq",
+  "res": {
+    "lc": 1,
+    "type": "constructor",
+    "id": ["langchain_core", "messages", "AIMessage"],
+    "kwargs": {
+      "content": "SRK is a common abbreviation or nickname for Shah Rukh Khan, a well-known Indian actor, producer, and television personality. Shah Rukh Khan was born on November 2, 1965, in New Delhi, India. He began his career in acting in the early 1990s and has since appeared in numerous films in a variety of genres, including romance, drama, action, and comedy.\n\nShah Rukh Khan is often referred to as the \"King of Bollywood\" due to his immense popularity and success in the Indian film industry. He has won numerous awards for his acting, including several Filmfare Awards, which are considered to be the Indian equivalent of the Oscars. In addition to his work in film, Shah Rukh Khan has also hosted several television shows and has been involved in various charitable endeavors.",
+      "additional_kwargs": {},
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 17,
+        "output_tokens": 190,
+        "total_tokens": 207
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "completionTokens": 190,
+          "promptTokens": 17,
+          "totalTokens": 207
+        },
+        "finish_reason": "stop"
+      }
+    }
+  }
+}

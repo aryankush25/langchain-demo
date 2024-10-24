@@ -1,0 +1,57 @@
+{
+  "service": "fireworks",
+  "res": {
+    "lc": 1,
+    "type": "constructor",
+    "id": ["langchain_core", "messages", "AIMessage"],
+    "kwargs": {
+      "lc_serializable": true,
+      "lc_kwargs": {
+        "lc_serializable": true,
+        "lc_kwargs": {
+          "content": "A question that's sure to bring a smile to the faces of millions of fans around the world!\n\nSRK stands for Shah Rukh Khan, a renowned Indian film actor, producer, and television personality. He is often referred to as the \"King of Bollywood\" or \"King Khan\" due to his immense popularity and success in the Indian film industry.\n\nBorn on November 2, 1965, in New Delhi, India, Shah Rukh Khan has been active in the film industry since the late 1980s. He has appeared in over 80 films, including romantic dramas, comedies, and action movies. Some of his most notable films include:\n\n* Dilwale Dulhania Le Jayenge (1995)\n* Kuch Kuch Hota Hai (1998)\n* Devdas (2002)\n* Kal Ho Naa Ho (2003)\n* Veer-Zaara (2004)\n* Chak De India (2007)\n* Om Shanti Om (2007)\n* My Name Is Khan (2010)\n* Chennai Express (2013)\n* Happy New Year (2014)\n* Dilwale (2015)\n* Raees (2017)\n* Zero (2018)\n\nThroughout his career, Shah Rukh Khan has won numerous awards, including 14 Filmfare Awards, and has been honored with the Padma Shri, India's fourth-highest civilian award, in 2005.\n\nSRK is not only a talented actor but also a successful entrepreneur, with his own production company, Red Chillies Entertainment, and a chain of restaurants and hotels. He is also known for his philanthropic work, particularly in the areas of education and healthcare.\n\nWith a massive following in India and around the world, Shah Rukh Khan is undoubtedly one of the most beloved and respected figures in Indian cinema.",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "ec44d8e0-df2e-4b13-94e2-bbe5c80a3bf6"
+        },
+        "lc_namespace": ["langchain_core", "messages"],
+        "content": "A question that's sure to bring a smile to the faces of millions of fans around the world!\n\nSRK stands for Shah Rukh Khan, a renowned Indian film actor, producer, and television personality. He is often referred to as the \"King of Bollywood\" or \"King Khan\" due to his immense popularity and success in the Indian film industry.\n\nBorn on November 2, 1965, in New Delhi, India, Shah Rukh Khan has been active in the film industry since the late 1980s. He has appeared in over 80 films, including romantic dramas, comedies, and action movies. Some of his most notable films include:\n\n* Dilwale Dulhania Le Jayenge (1995)\n* Kuch Kuch Hota Hai (1998)\n* Devdas (2002)\n* Kal Ho Naa Ho (2003)\n* Veer-Zaara (2004)\n* Chak De India (2007)\n* Om Shanti Om (2007)\n* My Name Is Khan (2010)\n* Chennai Express (2013)\n* Happy New Year (2014)\n* Dilwale (2015)\n* Raees (2017)\n* Zero (2018)\n\nThroughout his career, Shah Rukh Khan has won numerous awards, including 14 Filmfare Awards, and has been honored with the Padma Shri, India's fourth-highest civilian award, in 2005.\n\nSRK is not only a talented actor but also a successful entrepreneur, with his own production company, Red Chillies Entertainment, and a chain of restaurants and hotels. He is also known for his philanthropic work, particularly in the areas of education and healthcare.\n\nWith a massive following in India and around the world, Shah Rukh Khan is undoubtedly one of the most beloved and respected figures in Indian cinema.",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "id": "ec44d8e0-df2e-4b13-94e2-bbe5c80a3bf6",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 379,
+          "input_tokens": 24,
+          "total_tokens": 403,
+          "input_token_details": {},
+          "output_token_details": {}
+        }
+      },
+      "lc_namespace": ["langchain_core", "messages"],
+      "content": "A question that's sure to bring a smile to the faces of millions of fans around the world!\n\nSRK stands for Shah Rukh Khan, a renowned Indian film actor, producer, and television personality. He is often referred to as the \"King of Bollywood\" or \"King Khan\" due to his immense popularity and success in the Indian film industry.\n\nBorn on November 2, 1965, in New Delhi, India, Shah Rukh Khan has been active in the film industry since the late 1980s. He has appeared in over 80 films, including romantic dramas, comedies, and action movies. Some of his most notable films include:\n\n* Dilwale Dulhania Le Jayenge (1995)\n* Kuch Kuch Hota Hai (1998)\n* Devdas (2002)\n* Kal Ho Naa Ho (2003)\n* Veer-Zaara (2004)\n* Chak De India (2007)\n* Om Shanti Om (2007)\n* My Name Is Khan (2010)\n* Chennai Express (2013)\n* Happy New Year (2014)\n* Dilwale (2015)\n* Raees (2017)\n* Zero (2018)\n\nThroughout his career, Shah Rukh Khan has won numerous awards, including 14 Filmfare Awards, and has been honored with the Padma Shri, India's fourth-highest civilian award, in 2005.\n\nSRK is not only a talented actor but also a successful entrepreneur, with his own production company, Red Chillies Entertainment, and a chain of restaurants and hotels. He is also known for his philanthropic work, particularly in the areas of education and healthcare.\n\nWith a massive following in India and around the world, Shah Rukh Khan is undoubtedly one of the most beloved and respected figures in Indian cinema.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 24,
+          "completionTokens": 379,
+          "totalTokens": 403
+        },
+        "finish_reason": "stop"
+      },
+      "id": "ec44d8e0-df2e-4b13-94e2-bbe5c80a3bf6",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 379,
+        "input_tokens": 24,
+        "total_tokens": 403,
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  }
+}
