@@ -1,43 +1,40 @@
 {
-  "service": "anthropic",
-  "res": {
-    "lc": 1,
-    "type": "constructor",
-    "id": ["langchain_core", "messages", "AIMessage"],
-    "kwargs": {
-      "content": "SRK is the widely used acronym for Shah Rukh Khan, one of the most famous and influential actors in Indian cinema, particularly in Bollywood (the Hindi-language film industry based in Mumbai). Here are some key points about SRK:\n\n1. Full name: Shah Rukh Khan, born on November 2, 1965, in New Delhi, India.\n\n2. Career: He began his career in television in the late 1980s and made his Bollywood debut in 1992.\n\n3. Nickname: Often referred to as the \"King of Bollywood\" or \"King Khan\" due to his immense popularity and success.\n\n4. Notable films: He has starred in numerous blockbusters, including \"Dilwale Dulhania Le Jayenge,\" \"Kuch Kuch Hota Hai,\" \"Chak De! India,\" and \"My Name is Khan.\"\n\n5. Awards: He has won numerous awards, including 14 Filmfare Awards (India's equivalent to the Oscars).\n\n6. Global recognition: SRK is one of the most recognizable Indian celebrities worldwide and has a massive international fan following.\n\n7. Business ventures: Besides acting, he is also a film producer and co-owns the Indian Premier League cricket team Kolkata Knight Riders.\n\n8. Philanthropy: He is known for his charitable work and supports various causes through his non-profit organization, Meer Foundation.\n\nSRK is not just an actor but a cultural icon in India and among the Indian diaspora globally, known for his charisma, wit, and versatility as a performer.",
-      "additional_kwargs": {
-        "id": "msg_01CEo1BTTgTsCNPRQK6jERGG",
-        "type": "message",
-        "role": "assistant",
-        "model": "claude-3-5-sonnet-20240620",
-        "stop_reason": "end_turn",
-        "stop_sequence": null,
-        "usage": {
-          "input_tokens": 17,
-          "output_tokens": 361
-        }
-      },
-      "usage_metadata": {
-        "input_tokens": 17,
-        "output_tokens": 361,
-        "total_tokens": 378
-      },
-      "response_metadata": {
-        "id": "msg_01CEo1BTTgTsCNPRQK6jERGG",
-        "model": "claude-3-5-sonnet-20240620",
-        "stop_reason": "end_turn",
-        "stop_sequence": null,
-        "usage": {
-          "input_tokens": 17,
-          "output_tokens": 361
-        },
-        "type": "message",
-        "role": "assistant"
-      },
+  "lc": 1,
+  "type": "constructor",
+  "id": ["langchain_core", "messages", "AIMessage"],
+  "kwargs": {
+    "content": "SRK is the widely used acronym for Shah Rukh Khan, one of the most famous and influential actors in Indian cinema, particularly in Bollywood (the Hindi-language film industry based in Mumbai). Here are some key points about SRK:\n\n1. Full name: Shah Rukh Khan, born on November 2, 1965, in New Delhi, India.\n\n2. Career: He began his career in television in the late 1980s and made his Bollywood debut in 1992.\n\n3. Nickname: Often referred to as the \"King of Bollywood\" or \"King Khan\" due to his immense popularity and success.\n\n4. Notable films: He has starred in numerous blockbusters, including \"Dilwale Dulhania Le Jayenge,\" \"Kuch Kuch Hota Hai,\" \"Chak De! India,\" and \"My Name is Khan.\"\n\n5. Awards: He has won numerous awards, including 14 Filmfare Awards (India's equivalent to the Oscars).\n\n6. Global recognition: SRK is one of the most recognizable Indian celebrities worldwide and has a massive international fan following.\n\n7. Business ventures: Besides acting, he is also a film producer and co-owns the Indian Premier League cricket team Kolkata Knight Riders.\n\n8. Philanthropy: He is known for his charitable work and supports various causes through his non-profit organization, Meer Foundation.\n\nSRK is not just an actor but a cultural icon in India and among the Indian diaspora globally, known for his charisma, wit, and versatility as a performer.",
+    "additional_kwargs": {
       "id": "msg_01CEo1BTTgTsCNPRQK6jERGG",
-      "tool_calls": [],
-      "invalid_tool_calls": []
-    }
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-5-sonnet-20240620",
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 17,
+        "output_tokens": 361
+      }
+    },
+    "usage_metadata": {
+      "input_tokens": 17,
+      "output_tokens": 361,
+      "total_tokens": 378
+    },
+    "response_metadata": {
+      "id": "msg_01CEo1BTTgTsCNPRQK6jERGG",
+      "model": "claude-3-5-sonnet-20240620",
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 17,
+        "output_tokens": 361
+      },
+      "type": "message",
+      "role": "assistant"
+    },
+    "id": "msg_01CEo1BTTgTsCNPRQK6jERGG",
+    "tool_calls": [],
+    "invalid_tool_calls": []
   }
 }

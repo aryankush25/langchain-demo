@@ -1,62 +1,59 @@
 {
-  "service": "google",
-  "res": {
-    "lc": 1,
-    "type": "constructor",
-    "id": ["langchain_core", "messages", "AIMessage"],
-    "kwargs": {
-      "content": "SRK is a common abbreviation for **Shah Rukh Khan**, a highly acclaimed Indian actor, film producer, and television personality. He is widely regarded as one of the biggest movie stars in the world and is often referred to as the \"**King of Bollywood**\". \n",
-      "tool_calls": [],
-      "additional_kwargs": {
-        "finishReason": "STOP",
-        "index": 0,
-        "safetyRatings": [
-          {
-            "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-            "probability": "NEGLIGIBLE"
-          },
-          {
-            "category": "HARM_CATEGORY_HATE_SPEECH",
-            "probability": "NEGLIGIBLE"
-          },
-          {
-            "category": "HARM_CATEGORY_HARASSMENT",
-            "probability": "NEGLIGIBLE"
-          },
-          {
-            "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-            "probability": "NEGLIGIBLE"
-          }
-        ]
-      },
-      "usage_metadata": {
-        "input_tokens": 10,
-        "output_tokens": 53,
-        "total_tokens": 63
-      },
-      "invalid_tool_calls": [],
-      "response_metadata": {
-        "finishReason": "STOP",
-        "index": 0,
-        "safetyRatings": [
-          {
-            "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-            "probability": "NEGLIGIBLE"
-          },
-          {
-            "category": "HARM_CATEGORY_HATE_SPEECH",
-            "probability": "NEGLIGIBLE"
-          },
-          {
-            "category": "HARM_CATEGORY_HARASSMENT",
-            "probability": "NEGLIGIBLE"
-          },
-          {
-            "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-            "probability": "NEGLIGIBLE"
-          }
-        ]
-      }
+  "lc": 1,
+  "type": "constructor",
+  "id": ["langchain_core", "messages", "AIMessage"],
+  "kwargs": {
+    "content": "SRK is a common abbreviation for **Shah Rukh Khan**, a highly acclaimed Indian actor, film producer, and television personality. He is widely regarded as one of the biggest movie stars in the world and is often referred to as the \"**King of Bollywood**\". \n",
+    "tool_calls": [],
+    "additional_kwargs": {
+      "finishReason": "STOP",
+      "index": 0,
+      "safetyRatings": [
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE"
+        }
+      ]
+    },
+    "usage_metadata": {
+      "input_tokens": 10,
+      "output_tokens": 53,
+      "total_tokens": 63
+    },
+    "invalid_tool_calls": [],
+    "response_metadata": {
+      "finishReason": "STOP",
+      "index": 0,
+      "safetyRatings": [
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE"
+        }
+      ]
     }
   }
 }

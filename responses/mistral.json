@@ -1,27 +1,24 @@
 {
-  "service": "mistral",
-  "res": {
-    "lc": 1,
-    "type": "constructor",
-    "id": ["langchain_core", "messages", "AIMessage"],
-    "kwargs": {
-      "content": "SRK typically refers to Shah Rukh Khan, a renowned Indian actor, film producer, and television personality. He is often referred to by the acronym SRK and is known as the \"King of Bollywood.\" Khan has appeared in more than 80 Bollywood films and has earned numerous accolades, including 14 Filmfare Awards. He is one of the most successful and influential actors in the history of Indian cinema. If you have any specific questions about Shah Rukh Khan or need more detailed information, feel free to ask!",
-      "tool_calls": [],
-      "invalid_tool_calls": [],
-      "additional_kwargs": {},
-      "usage_metadata": {
-        "input_tokens": 14,
-        "output_tokens": 117,
-        "total_tokens": 131
+  "lc": 1,
+  "type": "constructor",
+  "id": ["langchain_core", "messages", "AIMessage"],
+  "kwargs": {
+    "content": "SRK typically refers to Shah Rukh Khan, a renowned Indian actor, film producer, and television personality. He is often referred to by the acronym SRK and is known as the \"King of Bollywood.\" Khan has appeared in more than 80 Bollywood films and has earned numerous accolades, including 14 Filmfare Awards. He is one of the most successful and influential actors in the history of Indian cinema. If you have any specific questions about Shah Rukh Khan or need more detailed information, feel free to ask!",
+    "tool_calls": [],
+    "invalid_tool_calls": [],
+    "additional_kwargs": {},
+    "usage_metadata": {
+      "input_tokens": 14,
+      "output_tokens": 117,
+      "total_tokens": 131
+    },
+    "response_metadata": {
+      "tokenUsage": {
+        "completionTokens": 117,
+        "promptTokens": 14,
+        "totalTokens": 131
       },
-      "response_metadata": {
-        "tokenUsage": {
-          "completionTokens": 117,
-          "promptTokens": 14,
-          "totalTokens": 131
-        },
-        "finish_reason": "stop"
-      }
+      "finish_reason": "stop"
     }
   }
 }
