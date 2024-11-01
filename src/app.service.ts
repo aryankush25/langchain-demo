@@ -57,7 +57,7 @@ export class AppService {
       modelClass: ChatGroq,
     },
     fireworks: {
-      modelName: 'accounts/fireworks/models/llama-v3-70b',
+      modelName: 'accounts/fireworks/models/llama-v3p1-70b-instruct',
       apiKeyEnv: 'FIREWORKS_API_KEY_1',
       modelClass: ChatFireworks,
       additionalConfig: { temperature: 0 },
@@ -65,7 +65,7 @@ export class AppService {
   };
 
   private readonly baseMessages: BaseMessage[] = [
-    new SystemMessage('Process the following query'),
+    new SystemMessage('Process the following query in Hindi'),
     new HumanMessage(
       'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
     ),
