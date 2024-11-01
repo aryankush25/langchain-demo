@@ -5,7 +5,11 @@ import { ChatMistralAI } from '@langchain/mistralai';
 import { ChatGroq } from '@langchain/groq';
 import { ChatGoogleGenerativeAI } from '@langchain/google-genai';
 import { ChatFireworks } from '@langchain/community/chat_models/fireworks';
-import { HumanMessage, SystemMessage } from '@langchain/core/messages';
+import {
+  AIMessage,
+  HumanMessage,
+  SystemMessage,
+} from '@langchain/core/messages';
 
 @Injectable()
 export class AppService {
@@ -48,6 +52,12 @@ export class AppService {
     });
     const messages = [
       new SystemMessage('Process the following query'),
+      new HumanMessage(
+        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+      ),
+      new AIMessage(
+        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+      ),
       new HumanMessage(userQuery),
     ];
 
@@ -64,6 +74,12 @@ export class AppService {
 
     const messages = [
       new SystemMessage('Process the following query'),
+      new HumanMessage(
+        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+      ),
+      new AIMessage(
+        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+      ),
       new HumanMessage(userQuery),
     ];
 
@@ -80,6 +96,12 @@ export class AppService {
 
     const messages = [
       new SystemMessage('Process the following query'),
+      new HumanMessage(
+        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+      ),
+      new AIMessage(
+        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+      ),
       new HumanMessage(userQuery),
     ];
 
@@ -96,6 +118,12 @@ export class AppService {
 
     const messages = [
       new SystemMessage('Process the following query'),
+      new HumanMessage(
+        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+      ),
+      new AIMessage(
+        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+      ),
       new HumanMessage(userQuery),
     ];
 
@@ -112,6 +140,12 @@ export class AppService {
 
     const messages = [
       new SystemMessage('Process the following query'),
+      new HumanMessage(
+        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+      ),
+      new AIMessage(
+        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+      ),
       new HumanMessage(userQuery),
     ];
 
@@ -129,6 +163,12 @@ export class AppService {
 
     const messages = [
       new SystemMessage('Process the following query'),
+      new HumanMessage(
+        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+      ),
+      new AIMessage(
+        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+      ),
       new HumanMessage(userQuery),
     ];
 
