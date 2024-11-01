@@ -89,6 +89,17 @@ export class AppService {
     const messages = [...this.baseMessages, new HumanMessage(userQuery)];
     const res = await model.invoke(messages);
 
-    return { service, res };
+    console.log('content ', res.content);
+    console.log('response_metadata ', res.response_metadata);
+    console.log('usage_metadata ', res.usage_metadata);
+    console.log('name ', res.name);
+
+    return {
+      service,
+      content: res.content,
+      response_metadata: res.response_metadata,
+      usage_metadata: res.usage_metadata,
+      name: res.name,
+    };
   }
 }
