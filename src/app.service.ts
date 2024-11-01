@@ -9,171 +9,86 @@ import {
   AIMessage,
   HumanMessage,
   SystemMessage,
+  BaseMessage,
 } from '@langchain/core/messages';
+import { BaseChatModel } from '@langchain/core/language_models/chat_models';
+
+type AIService =
+  | 'openai'
+  | 'anthropic'
+  | 'mistral'
+  | 'google'
+  | 'gorq'
+  | 'fireworks';
+
+interface ModelConfig {
+  modelName: string;
+  apiKeyEnv: string;
+  modelClass: new (config: any) => BaseChatModel;
+  additionalConfig?: Record<string, any>;
+}
 
 @Injectable()
 export class AppService {
-  async pingAI(
-    service:
-      | 'openai'
-      | 'anthropic'
-      | 'mistral'
-      | 'google'
-      | 'gorq'
-      | 'fireworks',
-    userQuery: string,
-  ) {
-    if (service === 'openai') {
-      return this.openai(userQuery);
-    }
-    if (service === 'anthropic') {
-      return this.anthropic(userQuery);
-    }
-    if (service === 'mistral') {
-      return this.mistral(userQuery);
-    }
-    if (service === 'google') {
-      return this.googleGenerativeAI(userQuery);
-    }
-    if (service === 'gorq') {
-      return this.gorq(userQuery);
-    }
-    if (service === 'fireworks') {
-      return this.fireworks(userQuery);
+  private readonly modelConfigs: Record<AIService, ModelConfig> = {
+    openai: {
+      modelName: 'gpt-4',
+      apiKeyEnv: 'OPENAI_API_KEY_1',
+      modelClass: ChatOpenAI,
+    },
+    anthropic: {
+      modelName: 'claude-3-sonnet-20240229',
+      apiKeyEnv: 'ANTHROPIC_API_KEY_1',
+      modelClass: ChatAnthropic,
+    },
+    mistral: {
+      modelName: 'mistral-large-latest',
+      apiKeyEnv: 'MISTRAL_API_KEY_1',
+      modelClass: ChatMistralAI,
+    },
+    google: {
+      modelName: 'gemini-1.5-pro',
+      apiKeyEnv: 'GOOGLE_API_KEY_1',
+      modelClass: ChatGoogleGenerativeAI,
+    },
+    gorq: {
+      modelName: 'mixtral-8x7b-32768',
+      apiKeyEnv: 'GROQ_API_KEY_1',
+      modelClass: ChatGroq,
+    },
+    fireworks: {
+      modelName: 'accounts/fireworks/models/llama-v3-70b',
+      apiKeyEnv: 'FIREWORKS_API_KEY_1',
+      modelClass: ChatFireworks,
+      additionalConfig: { temperature: 0 },
+    },
+  };
+
+  private readonly baseMessages: BaseMessage[] = [
+    new SystemMessage('Process the following query'),
+    new HumanMessage(
+      'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
+    ),
+    new AIMessage(
+      'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
+    ),
+  ];
+
+  async pingAI(service: AIService, userQuery: string) {
+    const config = this.modelConfigs[service];
+    if (!config) {
+      return { service: 'unknown', res: 'unknown' };
     }
 
-    return { service: 'unknown', res: 'unknown' };
-  }
-
-  private async openai(userQuery: string) {
-    const model = new ChatOpenAI({
-      model: 'gpt-4o',
-      apiKey: process.env.OPENAI_API_KEY_1,
-    });
-    const messages = [
-      new SystemMessage('Process the following query'),
-      new HumanMessage(
-        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
-      ),
-      new AIMessage(
-        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
-      ),
-      new HumanMessage(userQuery),
-    ];
-
-    const res = await model.invoke(messages);
-
-    return { service: 'openai', res };
-  }
-
-  private async anthropic(userQuery: string) {
-    const model = new ChatAnthropic({
-      model: 'claude-3-5-sonnet-20240620',
-      apiKey: process.env.ANTHROPIC_API_KEY_1,
+    const model = new config.modelClass({
+      model: config.modelName,
+      apiKey: process.env[config.apiKeyEnv],
+      ...config.additionalConfig,
     });
 
-    const messages = [
-      new SystemMessage('Process the following query'),
-      new HumanMessage(
-        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
-      ),
-      new AIMessage(
-        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
-      ),
-      new HumanMessage(userQuery),
-    ];
-
+    const messages = [...this.baseMessages, new HumanMessage(userQuery)];
     const res = await model.invoke(messages);
 
-    return { service: 'anthropic', res };
-  }
-
-  private async mistral(userQuery: string) {
-    const model = new ChatMistralAI({
-      model: 'mistral-large-latest',
-      apiKey: process.env.MISTRAL_API_KEY_1,
-    });
-
-    const messages = [
-      new SystemMessage('Process the following query'),
-      new HumanMessage(
-        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
-      ),
-      new AIMessage(
-        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
-      ),
-      new HumanMessage(userQuery),
-    ];
-
-    const res = await model.invoke(messages);
-
-    return { service: 'mistral', res };
-  }
-
-  async googleGenerativeAI(userQuery: string) {
-    const model = new ChatGoogleGenerativeAI({
-      model: 'gemini-1.5-pro',
-      apiKey: process.env.GOOGLE_API_KEY_1,
-    });
-
-    const messages = [
-      new SystemMessage('Process the following query'),
-      new HumanMessage(
-        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
-      ),
-      new AIMessage(
-        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
-      ),
-      new HumanMessage(userQuery),
-    ];
-
-    const res = await model.invoke(messages);
-
-    return { service: 'google', res };
-  }
-
-  async gorq(userQuery: string) {
-    const model = new ChatGroq({
-      model: 'mixtral-8x7b-32768',
-      apiKey: process.env.GROQ_API_KEY_1,
-    });
-
-    const messages = [
-      new SystemMessage('Process the following query'),
-      new HumanMessage(
-        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
-      ),
-      new AIMessage(
-        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
-      ),
-      new HumanMessage(userQuery),
-    ];
-
-    const res = await model.invoke(messages);
-
-    return { service: 'gorq', res };
-  }
-
-  async fireworks(userQuery: string) {
-    const model = new ChatFireworks({
-      model: 'accounts/fireworks/models/llama-v3p1-70b-instruct',
-      temperature: 0,
-      apiKey: process.env.FIREWORKS_API_KEY_1,
-    });
-
-    const messages = [
-      new SystemMessage('Process the following query'),
-      new HumanMessage(
-        'Hi! My name is Aryan. Please answer me accordingly and include my name as much as possible.',
-      ),
-      new AIMessage(
-        'Hi Aryan! I am an assistant designed to help you. How can I assist you today?',
-      ),
-      new HumanMessage(userQuery),
-    ];
-
-    const res = await model.invoke(messages);
-
-    return { service: 'fireworks', res };
+    return { service, res };
   }
 }
